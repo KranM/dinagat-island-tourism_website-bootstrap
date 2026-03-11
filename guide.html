@@ -1,0 +1,533 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Guide - Dinagat Islands</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+      .timeline {
+        border-left: 4px solid #198754;
+        padding-left: 20px;
+        margin-left: 10px;
+      }
+      .timeline-item {
+        position: relative;
+        margin-bottom: 2rem;
+      }
+      .timeline-item::before {
+        content: "";
+        position: absolute;
+        left: -29px;
+        top: 0;
+        width: 14px;
+        height: 14px;
+        background-color: #198754;
+        border-radius: 50%;
+        box-shadow: 0 0 0 4px white;
+      }
+      .accordion-body img {
+        object-fit: cover;
+        height: 100%;
+        min-height: 200px;
+      }
+      .tip-card {
+        transition: transform 0.3s ease;
+        border-radius: 15px;
+      }
+      .tip-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+      }
+      .tip-icon {
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background-color: #e9ecef;
+        font-size: 24px;
+        margin-bottom: 15px;
+      }
+      .navbar-custom {
+        background-image: linear-gradient(315deg, #0c1d25 0%, #0a2e3e 100%);
+      }
+    </style>
+  </head>
+  <body class="bg-light">
+    <nav
+      class="navbar navbar-expand-lg navbar-dark navbar-custom sticky-top shadow-sm"
+    >
+      <div class="container">
+        <a class="navbar-brand fw-bold fs-4" href="index.html"
+          ><i class="bi bi-geo-alt-fill text-success"></i> Dinagat</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto fs-5">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="destinations.html">Destinations</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="guide.html">Guide</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header
+      class="bg-primary text-white text-center py-5"
+      style="background: linear-gradient(0deg, #033f54, #1f4b5e)"
+    >
+      <div class="container" data-aos="fade-down" data-aos-duration="1000">
+        <h1 class="display-4 fw-bold">
+          <i class="bi bi-journal-text"></i> Plan Your Trip
+        </h1>
+        <p class="lead">
+          Everything you need to know before visiting the Mystical Province.
+        </p>
+      </div>
+    </header>
+
+    <div
+      class="d-flex justify-content-center w-100"
+      style="
+        margin-top: -1px;
+        margin-bottom: -19px;
+        position: relative;
+        z-index: 10;
+      "
+    >
+      <div
+        style="
+          border-top: 20px solid #033f54;
+          border-left: 200px solid transparent;
+          border-right: 200px solid transparent;
+          width: 50vw;
+          height: 0;
+        "
+      ></div>
+    </div>
+
+    <section class="container py-5">
+      <div class="row g-5 justify-content-center">
+        <div class="col-lg-7">
+          <h3 class="fw-bold mb-4" data-aos="fade-right">Essential Info</h3>
+          <div
+            class="accordion shadow-sm border-0 bg-white rounded-3"
+            id="travelGuideAccordion"
+          >
+            <div
+              class="accordion-item border-0 border-bottom"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <h2 class="accordion-header" id="headingOne">
+                <button
+                  class="accordion-button fw-bold fs-5 bg-white rounded-top-3"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                >
+                  <i class="bi bi-airplane text-primary me-2"></i> How to Get
+                  There
+                </button>
+              </h2>
+              <div
+                id="collapseOne"
+                class="accordion-collapse collapse show"
+                data-bs-parent="#travelGuideAccordion"
+              >
+                <div class="accordion-body text-muted">
+                  <div class="row g-3">
+                    <div class="col-md-5">
+                      <img
+                        src="https://cdn.mos.cms.futurecdn.net/Tpwmmfo3CiAJvwd4vXGzvn-650-80.jpg.webp"
+                        class="img-fluid rounded-3 shadow-sm w-100"
+                        alt="Ferry Boat"
+                      />
+                    </div>
+                    <div
+                      class="col-md-7 d-flex flex-column justify-content-center"
+                    >
+                      <p>
+                        There are no commercial flights directly to the island,
+                        so you'll need to travel by sea.
+                      </p>
+                      <ul class="list-unstyled mb-0">
+                        <li class="mb-2">
+                          <i class="bi bi-1-circle-fill text-primary"></i>
+                          <strong>Fly:</strong> Book a flight from Manila or
+                          Cebu to Surigao Airport (SUG).
+                        </li>
+                        <li class="mb-2">
+                          <i class="bi bi-2-circle-fill text-primary"></i>
+                          <strong>Ride:</strong> Take a quick tricycle from the
+                          airport to Surigao City Port.
+                        </li>
+                        <li>
+                          <i class="bi bi-3-circle-fill text-primary"></i>
+                          <strong>Sail:</strong> Catch a passenger boat or RoRo
+                          ferry to San Jose, Dinagat Islands. The sea trip takes
+                          about 1 to 1.5 hours.
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="accordion-item border-0 border-bottom"
+              data-aos="fade-up"
+              data-aos-delay="150"
+            >
+              <h2 class="accordion-header" id="headingTwo">
+                <button
+                  class="accordion-button collapsed fw-bold fs-5 bg-white"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                >
+                  <i class="bi bi-scooter text-warning me-2"></i> Getting Around
+                  the Island
+                </button>
+              </h2>
+              <div
+                id="collapseTwo"
+                class="accordion-collapse collapse"
+                data-bs-parent="#travelGuideAccordion"
+              >
+                <div class="accordion-body text-muted">
+                  <div class="row g-3 flex-md-row-reverse">
+                    <div class="col-md-5">
+                      <img
+                        src="https://media-cdn.tripadvisor.com/media/photo-s/16/a6/62/05/banka.jpg"
+                        class="img-fluid rounded-3 shadow-sm w-100"
+                        alt="Island Road"
+                      />
+                    </div>
+                    <div
+                      class="col-md-7 d-flex flex-column justify-content-center"
+                    >
+                      <p>
+                        Dinagat has a rugged terrain, making travel part of the
+                        adventure!
+                      </p>
+                      <ul class="list-group list-group-flush mb-0">
+                        <li
+                          class="list-group-item bg-transparent text-muted px-0 border-light"
+                        >
+                          <i class="bi bi-check-circle-fill text-success"></i>
+                          <strong>Habal-Habal (Motorcycles):</strong> The
+                          primary mode of land transport. You can rent a driver
+                          for a full-day land tour.
+                        </li>
+                        <li
+                          class="list-group-item bg-transparent text-muted px-0 border-light"
+                        >
+                          <i class="bi bi-check-circle-fill text-success"></i>
+                          <strong>Pump Boats (Bangka):</strong> Essential for
+                          island hopping. Rent them at the port or coordinate
+                          with your homestay.
+                        </li>
+                        <li
+                          class="list-group-item bg-transparent text-muted px-0 border-light"
+                        >
+                          <i class="bi bi-check-circle-fill text-success"></i>
+                          <strong>Tricycles:</strong> Available only within the
+                          main town proper of San Jose.
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="accordion-item border-0 border-bottom"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <h2 class="accordion-header" id="headingThree">
+                <button
+                  class="accordion-button collapsed fw-bold fs-5 bg-white"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree"
+                >
+                  <i class="bi bi-house-door text-success me-2"></i> Where to
+                  Stay
+                </button>
+              </h2>
+              <div
+                id="collapseThree"
+                class="accordion-collapse collapse"
+                data-bs-parent="#travelGuideAccordion"
+              >
+                <div class="accordion-body text-muted">
+                  <div class="row g-3">
+                    <div class="col-md-5">
+                      <img
+                        src="https://images.trvl-media.com/lodging/13000000/12330000/12322100/12322012/6678de5f.jpg"
+                        class="img-fluid rounded-3 shadow-sm w-100"
+                        alt="Hotel Accommodation"
+                      />
+                    </div>
+                    <div
+                      class="col-md-7 d-flex flex-column justify-content-center"
+                    >
+                      <p>
+                        Most accommodations are budget friendly inns, lodges,
+                        and local homestays.
+                      </p>
+                      <ul class="list-unstyled mb-3">
+                        <li class="mb-2">
+                          <strong>San Jose (Capital):</strong> Best for
+                          first-timers. Near ATMs, restaurants, and the main
+                          port.
+                        </li>
+                        <li>
+                          <strong>Basilisa:</strong> Ideal for nature lovers
+                          wanting to wake up near tidal pools and remote
+                          beaches.
+                        </li>
+                      </ul>
+                      <div
+                        class="alert alert-warning py-2 mb-0 border-0"
+                        role="alert"
+                      >
+                        <i class="bi bi-lightbulb-fill"></i>
+                        <strong>Pro Tip:</strong> Book well in advance during
+                        peak summer!
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="accordion-item border-0"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <h2 class="accordion-header" id="headingFour">
+                <button
+                  class="accordion-button collapsed fw-bold fs-5 bg-white rounded-bottom-3"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseFour"
+                >
+                  <i class="bi bi-cup-hot text-danger me-2"></i> Local Food
+                </button>
+              </h2>
+              <div
+                id="collapseFour"
+                class="accordion-collapse collapse"
+                data-bs-parent="#travelGuideAccordion"
+              >
+                <div class="accordion-body text-muted">
+                  <div class="row g-3 flex-md-row-reverse">
+                    <div class="col-md-5">
+                      <img
+                        src="https://instagram.fmnl40-1.fna.fbcdn.net/v/t51.75761-15/483562336_18491649589053666_6476167740824451780_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=104&ig_cache_key=MzU4NjUyODczMzEwNjE3NzI5Mg%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjE0NDB4MTU3OS5zZHIuQzMifQ%3D%3D&_nc_ohc=2XEKShL9YX4Q7kNvwGi1XqC&_nc_oc=AdlXlDKLukJFTuyrhKRI0Hw4EsrY7LnC2xW2J57G7I93ehsIxkyyg5FcD-2wqWeV_w4&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fmnl40-1.fna&_nc_gid=UaZCERWlfWCjGg7qtRAJeg&_nc_ss=8&oh=00_AfzhC4HWgm5nMNtsrAI2BJHbuh2NwaEhdbwLFXVJw2Fn6g&oe=69B703E4"
+                        class="img-fluid rounded-3 shadow-sm w-100"
+                        alt="Local Seafood"
+                      />
+                    </div>
+                    <div
+                      class="col-md-7 d-flex flex-column justify-content-center"
+                    >
+                      <p>
+                        Dinagat is a paradise for seafood lovers. Food here is
+                        fresh and highly affordable.
+                      </p>
+                      <ul class="list-unstyled mb-0 mt-2">
+                        <li class="mb-3">
+                          <h6 class="fw-bold text-dark mb-1">🐟 Kinilaw</h6>
+                          <small
+                            >Fresh, raw fish cured in local coconut vinegar,
+                            ginger, onions, and chili.</small
+                          >
+                        </li>
+                        <li class="mb-3">
+                          <h6 class="fw-bold text-dark mb-1">
+                            🦀 Fresh Crabs & Lobsters
+                          </h6>
+                          <small
+                            >Bought straight from the local fishermen in the
+                            morning. Have your host cook them!</small
+                          >
+                        </li>
+                        <li>
+                          <h6 class="fw-bold text-dark mb-1">🍡 Sayongsong</h6>
+                          <small
+                            >A sweet kakanin (rice cake) made from glutinous
+                            rice, coconut milk, and roasted peanuts.</small
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-5">
+          <div class="bg-white p-4 rounded-4 shadow-sm" data-aos="fade-left">
+            <h3 class="fw-bold mb-4">Suggested Itinerary</h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <h5 class="fw-bold text-success mb-1">
+                  Day 1: Arrival & Town Tour
+                </h5>
+                <p class="text-muted small">
+                  Arrive at San Jose via ferry. Check into your inn. Visit the
+                  PBMA Shrine, take photos at the Islander's Castle, and enjoy a
+                  seaside seafood dinner.
+                </p>
+              </div>
+              <div class="timeline-item">
+                <h5 class="fw-bold text-success mb-1">Day 2: Island Hopping</h5>
+                <p class="text-muted small">
+                  Rent a boat early in the morning. Head to the Pangabangan
+                  Tidal Pool for a swim, relax on the white sands of Bitaog
+                  Beach, and snorkel at Cab-ilan Beach.
+                </p>
+              </div>
+              <div class="timeline-item">
+                <h5 class="fw-bold text-success mb-1">
+                  Day 3: Nature Trek & Departure
+                </h5>
+                <p class="text-muted small">
+                  Take a morning hike to the mystical Lake Bababu. Head back to
+                  town to buy local souvenirs before riding the afternoon ferry
+                  back to Surigao.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container py-5 border-top border-2">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <h2 class="fw-bold">Know Before You Go</h2>
+        <p class="text-muted">
+          Practical tips to make your island adventure smooth and enjoyable.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
+          <div class="card h-100 tip-card border-0 bg-white p-3 text-center">
+            <div class="tip-icon mx-auto text-primary">
+              <i class="bi bi-cash-stack"></i>
+            </div>
+            <h5 class="fw-bold">Bring Cash</h5>
+            <p class="text-muted small mb-0">
+              ATMs are available in San Jose but can run out of cash. Bring
+              enough Philippine Pesos for your entire trip especially for island
+              hopping.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
+          <div class="card h-100 tip-card border-0 bg-white p-3 text-center">
+            <div class="tip-icon mx-auto text-success">
+              <i class="bi bi-cloud-sun"></i>
+            </div>
+            <h5 class="fw-bold">Best Time to Visit</h5>
+            <p class="text-muted small mb-0">
+              Plan your trip between <strong>March and May</strong> (dry season)
+              for calm seas. Avoid the monsoon months (Nov-Jan) as boat trips
+              get canceled.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
+          <div class="card h-100 tip-card border-0 bg-white p-3 text-center">
+            <div class="tip-icon mx-auto text-info">
+              <i class="bi bi-reception-3"></i>
+            </div>
+            <h5 class="fw-bold">Connectivity</h5>
+            <p class="text-muted small mb-0">
+              Smart and Globe networks work well in the main town. But, expect
+              weak to no data connection when you go island hopping.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-3" data-aos="fade-up" data-aos-delay="400">
+          <div class="card h-100 tip-card border-0 bg-white p-3 text-center">
+            <div class="tip-icon mx-auto text-danger">
+              <i class="bi bi-trash"></i>
+            </div>
+            <h5 class="fw-bold">Eco-Tourism</h5>
+            <p class="text-muted small mb-0">
+              Keep Dinagat islands clean!. Throw you trash on proper disposal
+              sites.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-4 mt-auto">
+      <div class="container">
+        <p class="mb-0 text-light">
+          © 2026 Dinagat Islands Tourism. All Rights Reserved. Made by Kristan
+          with Bootstrap 5.
+        </p>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ once: true, duration: 400 });
+      document.querySelectorAll(".nav-link").forEach((link) => {
+        if (link.href === window.location.href)
+          link.classList.add("active", "fw-bold", "text-success");
+      });
+    </script>
+  </body>
+</html>
